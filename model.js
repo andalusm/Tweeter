@@ -1,4 +1,7 @@
 const Tweeter = function () {
+    const INITIAL_POSTS_NUMBER = 3
+    const INITIAL_COMMENTS_NUMBER = 7
+
     const _posts = [
         {
             text: "First post!",
@@ -19,8 +22,8 @@ const Tweeter = function () {
             ]
         }
     ]
-    let postIdCounter = 3
-    let commentIdCounter = 7
+    let postIdCounter = INITIAL_POSTS_NUMBER
+    let commentIdCounter = INITIAL_COMMENTS_NUMBER
 
     const getPosts = function () {
         return _posts
