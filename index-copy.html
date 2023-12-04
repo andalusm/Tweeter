@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tweeter</title>
+    <link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title">Tweeter</h1><input type="text" placeholder="What's on your mind?" id="input">
+        <div id="post" onclick="post()">Twit</div>
+        <div id="posts"></div>
+    </div>
+    <script type="text/x-handlebars-template" id="posts-template">
+        {{#each posts}}
+            <div data-id={{id}}  class=post > <div class=post-text>{{text}} <div class=delete>Delete post</div></div>
+                {{#each comments}}
+                <div data-id={{id}} class= comments>{{text}}<div class=delete-comment>X</div></div>
+                {{/each}}
+            <input type='text' placeholder='comment' class=postComment> <button class=comment >post comment</button>
+        </div>
+        {{/each}}
+    </script>
+    <script src="render.js"></script> <!-- You'll create this soon -->
+    <script src="model.js"></script> <!-- You've got this -->
+    <script src="main.js"></script> <!-- You'll create this soon -->
+</body>
+
+</html>

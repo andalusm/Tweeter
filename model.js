@@ -29,6 +29,9 @@ const Tweeter = function () {
         return _posts
     }
     const addPost = function (text) {
+        if(text === ""){
+            throw new Error("Post is empty");
+        }
         _posts.push({ text, id: `p${postIdCounter}`, comments: [] })
         postIdCounter += 1
     }
@@ -41,7 +44,9 @@ const Tweeter = function () {
     }
 
     const addComment = function (text, postId) {
-
+        if(text === ""){
+            throw new Error("Comment is empty");
+        }
         const i = _posts.findIndex(p => p.id == postId)
         if (i >= 0) {
             _posts[i].comments.push({ id: `c${commentIdCounter}`, text })
