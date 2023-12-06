@@ -15,8 +15,5 @@ To use TweeterClone, simply clone the repository and open the `index.html` file 
 
 Feel free to modify the code, styles, and content to suit your needs.
 
-## Contributing
-Contributions are welcome! Feel free to open issues, submit pull requests, or suggest new features. Please follow our [contribution guidelines](CONTRIBUTING.md).
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
